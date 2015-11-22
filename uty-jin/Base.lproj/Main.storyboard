@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FancyBalloons.ttf">
+            <string>FancyBalloons</string>
+            <string>FancyBalloons</string>
+            <string>FancyBalloons</string>
+            <string>FancyBalloons</string>
+            <string>FancyBalloons</string>
+            <string>FancyBalloons</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="uty_jin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K1J-QM-W5P"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q4c-QQ-ak6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-63-zTw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-9K-Fns">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="PRv-Fg-HAc" kind="modal" id="5Sr-dI-3Xr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="280"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LAJ-qR-qSI">
+            <objects>
+                <viewController id="RY8-uA-xOG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kUD-BM-lsw"/>
+                        <viewControllerLayoutGuide type="bottom" id="P3X-4f-zhc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1HL-aB-BSB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="utyu1.png" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-WX-bQG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-XU-Nzg">
+                                <rect key="frame" x="20" y="25" width="286" height="39"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QoQ-WX-bQG" firstAttribute="top" secondItem="1HL-aB-BSB" secondAttribute="topMargin" id="8uf-04-u8X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QoQ-WX-bQG" secondAttribute="trailing" constant="-20" id="9vV-Hz-pBI"/>
+                            <constraint firstItem="P3X-4f-zhc" firstAttribute="top" secondItem="QoQ-WX-bQG" secondAttribute="bottom" id="S3v-UM-MTd"/>
+                            <constraint firstItem="QoQ-WX-bQG" firstAttribute="leading" secondItem="1HL-aB-BSB" secondAttribute="leadingMargin" constant="-20" id="Xm7-nc-boV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TUO-Vy-DAv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcb-rD-iSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="1046"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FyJ-cL-xLN">
+            <objects>
+                <viewController id="ZH0-bE-cET" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3q2-Em-NcE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kil-A9-1v9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hz1-Rg-6Th">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l8q-oP-3ZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="1055"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="hjW-dY-b02">
+            <objects>
+                <viewController id="PRv-Fg-HAc" customClass="MainViewController" customModule="uty_jin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eZ7-MS-RWk"/>
+                        <viewControllerLayoutGuide type="bottom" id="jF7-dv-DrU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MBC-bE-yuC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="utyu1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ThY-vS-ahh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYC-tW-ttR">
+                                <rect key="frame" x="61" y="36" width="93" height="29"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-TR-AGu">
+                                <rect key="frame" x="7" y="287" width="268" height="85"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="67"/>
+                                <state key="normal" title="スターと">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="b" destination="PRv-Fg-HAc" eventType="touchUpInside" id="GHc-f1-n9D"/>
+                                    <action selector="b" destination="BYZ-38-t0r" eventType="touchUpInside" id="KK6-ML-gXA"/>
+                                    <segue destination="l7K-ed-M5h" kind="modal" id="eEV-K6-2UB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkI-Dg-RTB">
+                                <rect key="frame" x="32" y="418" width="220" height="62"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="44"/>
+                                <state key="normal" title="ハイスコア">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="c" destination="PRv-Fg-HAc" eventType="touchUpInside" id="Eo1-Qz-p6c"/>
+                                    <action selector="c" destination="BYZ-38-t0r" eventType="touchUpInside" id="npW-YR-hDH"/>
+                                    <segue destination="RY8-uA-xOG" kind="modal" id="yt8-qe-88S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqr-aB-z0O">
+                                <rect key="frame" x="37" y="145" width="208" height="64"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="51"/>
+                                <state key="normal" title="せつめい">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="a" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dK-yd-ZiN"/>
+                                    <action selector="a" destination="PRv-Fg-HAc" eventType="touchUpInside" id="VBa-lA-ZA7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jF7-dv-DrU" firstAttribute="top" secondItem="ThY-vS-ahh" secondAttribute="bottom" id="RKV-xb-EM0"/>
+                            <constraint firstItem="ThY-vS-ahh" firstAttribute="leading" secondItem="MBC-bE-yuC" secondAttribute="leadingMargin" constant="-20" id="fHA-Dh-ezp"/>
+                            <constraint firstItem="ThY-vS-ahh" firstAttribute="top" secondItem="MBC-bE-yuC" secondAttribute="topMargin" id="lUL-2D-vxL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ThY-vS-ahh" secondAttribute="trailing" constant="-20" id="s1h-E0-k6S"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsX-Au-4Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="289"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FfL-8L-cQW">
+            <objects>
+                <viewController id="l7K-ed-M5h" customClass="bViewController" customModule="uty_jin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jY6-l0-5Nv"/>
+                        <viewControllerLayoutGuide type="bottom" id="zhZ-Qh-XDl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PLa-aX-lJx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFU-in-8a4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lul-aM-ylO">
+                                <rect key="frame" x="20" y="131" width="280" height="80"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-io-BFm">
+                                <rect key="frame" x="20" y="373" width="280" height="80"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-zY-t5Y">
+                                <rect key="frame" x="20" y="253" width="280" height="80"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTr-ke-JzK">
+                                <rect key="frame" x="20" y="258" width="280" height="70"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
+                                <state key="normal" title="ふつう">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="n9n-YT-hY9" kind="modal" id="LIc-E5-iZe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT5-1g-TR5">
+                                <rect key="frame" x="15" y="378" width="280" height="70"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
+                                <state key="normal" title="むずかしい">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZH0-bE-cET" kind="modal" id="ZaA-Ak-f9P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMl-OA-muj">
+                                <rect key="frame" x="20" y="514" width="101" height="37"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="25"/>
+                                <state key="normal" title="←戻ろう">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRH-1D-f8a">
+                                <rect key="frame" x="20" y="131" width="280" height="70"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
+                                <state key="normal" title="かんたん">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zwt-aJ-MNK" kind="modal" id="ryg-H9-HAj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRG-jS-fBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="280"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="1v9-1d-Z4o">
+            <objects>
+                <viewController id="Zwt-aJ-MNK" customClass="GameViewController" customModule="uty_jin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IWH-z9-PQb"/>
+                        <viewControllerLayoutGuide type="bottom" id="raY-bo-tiI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NBh-2t-iVe" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wX-4R-YIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="308"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hpe-d5-mEd">
+            <objects>
+                <viewController id="n9n-YT-hY9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xgs-Mr-71a"/>
+                        <viewControllerLayoutGuide type="bottom" id="cX7-jH-zjN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QZP-LQ-8km">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Iv-vZ-aw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="308"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="utyu1.png" width="328" height="568"/>
+    </resources>
+</document>
