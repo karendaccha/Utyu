@@ -102,6 +102,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     func fallUtyujin(){
         let radius: CGFloat = 20
         
+        
         ball = SKSpriteNode(imageNamed:"utyujin1.PNG")
         ball.position = CGPointMake(0, -20);
         ball.name = "ball";
