@@ -26,13 +26,29 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     var startPos:CGPoint!;
     var ball:SKSpriteNode!;
     
+    var width:CGFloat = 0.0
+    var height:CGFloat = 0.0
+    
+    var clearSquare = SKSpriteNode()
+    var tikyu = SKSpriteNode()
+    var hosi = SKSpriteNode()
+    var hosia = SKSpriteNode()
+    
+    let ballCategory: UInt32 = 0x1 << 0
+    let tikyuCategory: UInt32 = 0x1 << 1
+    
     override func didMoveToView(view: SKView) {
         
-        print("hoge")
+        width = UIScreen.mainScreen().bounds.size.width
+        height = UIScreen.mainScreen().bounds.size.height
+        
+        view.showsFPS = false
+        view.showsNodeCount = false
+        
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -3.0)
-        self.physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 0, y: 0, width: frame.width, height:
             frame.height))
+        self.physicsWorld.contactDelegate = self
         self.physicsBody?.restitution = 0.0
         self.physicsBody?.linearDamping = 0.0
         self.physicsBody?.friction = 0.0
@@ -41,36 +57,12 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         self.name = "frame"
         
         self.physicsWorld.gravity = CGVector(dx:0.0, dy: -2.0)
+        
         self.fallUtyujin()
         
         
     }
-    
-    //ボールが何かに当たったときに呼ばれる
-    func didBeginContact(contact: SKPhysicsContact) {
-        print(contact.bodyA.node!.name!)
-        if let nodeA = contact.bodyA.node {
-            if nodeA.name == "frame" {
-                // 壁との衝突
-            }else if nodeA.name == "redSquare"{
-                //　赤い四角との衝突
-            }
-        }
-    }
-    
-    override func update(currentTime: CFTimeInterval) {
-        
-        if (last == nil) {
-            last = currentTime
-        }
-        
-        // 何秒おきに呼ばれるか
-        if last + 1 <= currentTime {
-            last = currentTime
-        }
-    }
-    
-    
+
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
         
@@ -100,26 +92,95 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     }
     
     func fallUtyujin(){
-        let radius: CGFloat = 20
-        
         
         ball = SKSpriteNode(imageNamed:"utyujin1.PNG")
-        ball.position = CGPointMake(0, -20);
-        ball.name = "ball";
-        ball.physicsBody = SKPhysicsBody(circleOfRadius:ball.size.width/2)
-        ball.physicsBody!.dynamic = false;
-        ball.position = CGPoint(x:50, y:500)
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: radius)
-        ball.physicsBody?.restitution = 0.0
-        ball.physicsBody?.linearDamping = 0.0
-        ball.physicsBody?.mass = 1.0
-        ball.physicsBody?.friction = 0.0
-        ball.physicsBody?.contactTestBitMask = 1
-        ball.physicsBody?.collisionBitMask = 1
+        ball.xScale = 0.1
+        ball.yScale = 0.1
+        ball.position = CGPoint(x:150, y:500)
+        ball.physicsBody?.mass = 3.0
         ball.name = "ball"
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
+        ball.physicsBody?.categoryBitMask = ballCategory
+        tikyu.physicsBody?.contactTestBitMask = tikyuCategory
         self.addChild(ball)
+        
+        //透明の置き台
+        clearSquare = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(width, 50))
+        clearSquare.position = CGPoint(x: CGRectGetMidX(self.frame),y: 200)
+        clearSquare.physicsBody = SKPhysicsBody(rectangleOfSize: clearSquare.frame.size)
+        clearSquare.physicsBody!.affectedByGravity = false
+        clearSquare.physicsBody!.dynamic = false
+        clearSquare.physicsBody!.contactTestBitMask = 1
+        clearSquare.physicsBody?.collisionBitMask = 1
+        clearSquare.name = "clearSquare"
+        self.addChild(clearSquare)
+        
+        NSTimer .scheduledTimerWithTimeInterval(3.5,target: self,
+            selector: Selector("destorySquare"),
+            userInfo: nil,
+            repeats: false)
+        
+        //下のゴミ箱の部分
+        tikyu = SKSpriteNode(imageNamed: "tikyu.jpg")
+        tikyu.xScale = 0.8
+        tikyu.yScale = 0.5
+        tikyu.position = CGPoint(x: 100,y: 0)
+        tikyu.physicsBody = SKPhysicsBody(rectangleOfSize: tikyu.frame.size)
+        tikyu.physicsBody!.affectedByGravity = false
+        tikyu.physicsBody!.dynamic = false
+        tikyu.physicsBody?.categoryBitMask = tikyuCategory
+        tikyu.physicsBody?.contactTestBitMask = ballCategory
+        tikyu.name = "tikyu"
+        self.addChild(tikyu)
+        
+        hosi = SKSpriteNode(imageNamed:"hoshi1.jpg")
+        hosi.xScale = 0.2
+        hosi.yScale = 0.2
+        hosi.position = CGPoint(x: 50,y: 500)
+        hosi.physicsBody = SKPhysicsBody(rectangleOfSize: hosi.frame.size)
+        hosi.physicsBody!.affectedByGravity = false
+        hosi.physicsBody!.dynamic = false
+        hosi.physicsBody?.categoryBitMask = tikyuCategory
+        hosi.physicsBody?.contactTestBitMask = ballCategory
+        hosi.name = "hosi"
+        self.addChild(hosi)
+        
+        hosia = SKSpriteNode(color: UIColor.greenColor(), size: CGSizeMake(100, 100))
+        hosia.position = CGPoint(x: 300,y: 500)
+        hosia.physicsBody = SKPhysicsBody(rectangleOfSize: hosi.frame.size)
+        hosia.physicsBody!.affectedByGravity = false
+        hosia.physicsBody!.dynamic = false
+        hosia.physicsBody?.categoryBitMask = tikyuCategory
+        hosia.physicsBody?.contactTestBitMask = ballCategory
+        hosia.name = "hosa"
+        self.addChild(hosia)
 
+
+        
+        
+        
+        //ボールが当たった時に作られる！
     }
-    
-    
-}
+    func destorySquare(){
+        clearSquare.removeFromParent() //消える
+    }
+   
+    func didBeginContact(contact: SKPhysicsContact) {
+        print(contact.bodyA.node!.name!)
+        if let col = contact.bodyA.node {
+            if col.name == "tikyu" {
+                // 地球との衝突
+                ball.removeFromParent()
+                fallUtyujin()
+            }
+            
+            }
+            
+            
+        }
+    }
+
+
+
+
+

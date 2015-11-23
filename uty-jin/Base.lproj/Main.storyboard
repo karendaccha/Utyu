@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Zwt-aJ-MNK">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="FancyBalloons.ttf">
@@ -32,15 +30,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-9K-Fns">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqS-9K-Fns">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="19"/>
                                 <connections>
                                     <segue destination="PRv-Fg-HAc" kind="modal" id="5Sr-dI-3Xr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="がめんをタップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmM-sm-qmK">
+                                <rect key="frame" x="107" y="527" width="119" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -49,6 +53,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="60" y="280"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="t3K-Aa-8fW">
+            <objects>
+                <viewController id="0Rf-QR-jR9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LEd-V2-zyG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z6w-N2-JZJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sSh-S8-UWj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrr-Sb-hOZ">
+                                <rect key="frame" x="13" y="504" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="←戻ろう！"/>
+                                <connections>
+                                    <segue destination="PRv-Fg-HAc" kind="modal" id="RUQ-r0-rTn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmH-lv-3TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LAJ-qR-qSI">
@@ -62,10 +95,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="utyu1.png" translatesAutoresizingMaskIntoConstraints="NO" id="QoQ-WX-bQG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <animations/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-XU-Nzg">
                                 <rect key="frame" x="20" y="25" width="286" height="39"/>
                                 <animations/>
@@ -73,21 +102,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTA-0K-EJb">
+                                <rect key="frame" x="14" y="505" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="←戻ろう！"/>
+                                <connections>
+                                    <segue destination="PRv-Fg-HAc" kind="modal" id="tOh-b3-DlD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="QoQ-WX-bQG" firstAttribute="top" secondItem="1HL-aB-BSB" secondAttribute="topMargin" id="8uf-04-u8X"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QoQ-WX-bQG" secondAttribute="trailing" constant="-20" id="9vV-Hz-pBI"/>
-                            <constraint firstItem="P3X-4f-zhc" firstAttribute="top" secondItem="QoQ-WX-bQG" secondAttribute="bottom" id="S3v-UM-MTd"/>
-                            <constraint firstItem="QoQ-WX-bQG" firstAttribute="leading" secondItem="1HL-aB-BSB" secondAttribute="leadingMargin" constant="-20" id="Xm7-nc-boV"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TUO-Vy-DAv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcb-rD-iSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="1046"/>
+            <point key="canvasLocation" x="424" y="998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FyJ-cL-xLN">
@@ -106,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8q-oP-3ZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="1055"/>
+            <point key="canvasLocation" x="789" y="998"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hjW-dY-b02">
@@ -120,10 +151,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="utyu1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ThY-vS-ahh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <animations/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYC-tW-ttR">
                                 <rect key="frame" x="61" y="36" width="93" height="29"/>
                                 <animations/>
@@ -131,19 +158,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-TR-AGu">
-                                <rect key="frame" x="7" y="287" width="268" height="85"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="67"/>
-                                <state key="normal" title="スターと">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="b" destination="PRv-Fg-HAc" eventType="touchUpInside" id="GHc-f1-n9D"/>
-                                    <action selector="b" destination="BYZ-38-t0r" eventType="touchUpInside" id="KK6-ML-gXA"/>
-                                    <segue destination="l7K-ed-M5h" kind="modal" id="eEV-K6-2UB"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkI-Dg-RTB">
                                 <rect key="frame" x="32" y="418" width="220" height="62"/>
                                 <animations/>
@@ -167,22 +181,30 @@
                                 <connections>
                                     <action selector="a" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dK-yd-ZiN"/>
                                     <action selector="a" destination="PRv-Fg-HAc" eventType="touchUpInside" id="VBa-lA-ZA7"/>
+                                    <segue destination="0Rf-QR-jR9" kind="modal" id="HaP-YD-6FL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-TR-AGu">
+                                <rect key="frame" x="26" y="264" width="268" height="85"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="67"/>
+                                <state key="normal" title="スターと">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="b" destination="PRv-Fg-HAc" eventType="touchUpInside" id="GHc-f1-n9D"/>
+                                    <action selector="b" destination="BYZ-38-t0r" eventType="touchUpInside" id="KK6-ML-gXA"/>
+                                    <segue destination="l7K-ed-M5h" kind="modal" id="eEV-K6-2UB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jF7-dv-DrU" firstAttribute="top" secondItem="ThY-vS-ahh" secondAttribute="bottom" id="RKV-xb-EM0"/>
-                            <constraint firstItem="ThY-vS-ahh" firstAttribute="leading" secondItem="MBC-bE-yuC" secondAttribute="leadingMargin" constant="-20" id="fHA-Dh-ezp"/>
-                            <constraint firstItem="ThY-vS-ahh" firstAttribute="top" secondItem="MBC-bE-yuC" secondAttribute="topMargin" id="lUL-2D-vxL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ThY-vS-ahh" secondAttribute="trailing" constant="-20" id="s1h-E0-k6S"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NsX-Au-4Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="289"/>
+            <point key="canvasLocation" x="433" y="280"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FfL-8L-cQW">
@@ -241,6 +263,9 @@
                                 <state key="normal" title="←戻ろう">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="PRv-Fg-HAc" kind="modal" id="GBZ-Aj-r9k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRH-1D-f8a">
                                 <rect key="frame" x="20" y="131" width="280" height="70"/>
@@ -261,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRG-jS-fBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="280"/>
+            <point key="canvasLocation" x="789" y="280"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="1v9-1d-Z4o">
@@ -280,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wX-4R-YIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="308"/>
+            <point key="canvasLocation" x="1145" y="280"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hpe-d5-mEd">
@@ -299,10 +324,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Iv-vZ-aw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="308"/>
+            <point key="canvasLocation" x="1497" y="280"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="utyu1.png" width="328" height="568"/>
-    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tOh-b3-DlD"/>
+    </inferredMetricsTieBreakers>
 </document>
