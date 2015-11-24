@@ -122,9 +122,9 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         
         //下のゴミ箱の部分
         tikyu = SKSpriteNode(imageNamed: "tikyu.jpg")
-        tikyu.xScale = 0.8
+        tikyu.xScale = 0.6
         tikyu.yScale = 0.5
-        tikyu.position = CGPoint(x: 100,y: 0)
+        tikyu.position = CGPoint(x: 200,y: 0)
         tikyu.physicsBody = SKPhysicsBody(rectangleOfSize: tikyu.frame.size)
         tikyu.physicsBody!.affectedByGravity = false
         tikyu.physicsBody!.dynamic = false
@@ -145,7 +145,9 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         hosi.name = "hosi"
         self.addChild(hosi)
         
-        hosia = SKSpriteNode(color: UIColor.greenColor(), size: CGSizeMake(100, 100))
+        hosia = SKSpriteNode(imageNamed: "hoshi2.jpg")
+        hosia.xScale = 0.17
+        hosia.yScale = 0.17
         hosia.position = CGPoint(x: 300,y: 500)
         hosia.physicsBody = SKPhysicsBody(rectangleOfSize: hosi.frame.size)
         hosia.physicsBody!.affectedByGravity = false
@@ -173,6 +175,14 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 ball.removeFromParent()
                 fallUtyujin()
             }
+            func didBeginContact(contact: SKPhysicsContact) {
+                print(contact.bodyA.node!.name!)
+                if let col = contact.bodyA.node {
+                    if col.name == "hosi" {
+                        // 星との衝突
+                        ball.removeFromParent()
+                        fallUtyujin()
+
             
             }
             
@@ -182,5 +192,5 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
 
 
 
-
+        }}}
 
