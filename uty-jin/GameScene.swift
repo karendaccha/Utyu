@@ -136,7 +136,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         hosi = SKSpriteNode(imageNamed:"hoshi1.jpg")
         hosi.xScale = 0.2
         hosi.yScale = 0.2
-        hosi.position = CGPoint(x: 50,y: 500)
+        hosi.position = CGPoint(x: 55,y: 500)
         hosi.physicsBody = SKPhysicsBody(rectangleOfSize: hosi.frame.size)
         hosi.physicsBody!.affectedByGravity = false
         hosi.physicsBody!.dynamic = false
@@ -146,8 +146,8 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         self.addChild(hosi)
         
         hosia = SKSpriteNode(imageNamed: "hoshi2.jpg")
-        hosia.xScale = 0.17
-        hosia.yScale = 0.17
+        hosia.xScale = 0.16
+        hosia.yScale = 0.16
         hosia.position = CGPoint(x: 300,y: 500)
         hosia.physicsBody = SKPhysicsBody(rectangleOfSize: hosi.frame.size)
         hosia.physicsBody!.affectedByGravity = false
