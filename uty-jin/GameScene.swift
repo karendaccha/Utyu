@@ -185,6 +185,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
 
             
             }
+                    //音楽を入れる
             
             
         }

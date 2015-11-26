@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-63-zTw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_3430.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-63-zTw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <animations/>
                             </imageView>
@@ -296,7 +296,7 @@
                         <viewControllerLayoutGuide type="top" id="IWH-z9-PQb"/>
                         <viewControllerLayoutGuide type="bottom" id="raY-bo-tiI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NBh-2t-iVe" customClass="SKView">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="NBh-2t-iVe" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
@@ -327,7 +327,10 @@
             <point key="canvasLocation" x="1497" y="280"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_3430.JPG" width="679" height="1272"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tOh-b3-DlD"/>
+        <segue reference="5Sr-dI-3Xr"/>
     </inferredMetricsTieBreakers>
 </document>
