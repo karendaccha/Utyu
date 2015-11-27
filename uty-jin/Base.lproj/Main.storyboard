@@ -299,6 +299,16 @@
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="NBh-2t-iVe" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Hg-6h-4ee">
+                                <rect key="frame" x="192" y="28" width="74" height="2"/>
+                                <animations/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mUd-7F-mJX">
+                                <rect key="frame" x="12" y="133" width="94" height="2"/>
+                                <animations/>
+                            </progressView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

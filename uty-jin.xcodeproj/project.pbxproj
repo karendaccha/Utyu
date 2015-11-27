@@ -10,6 +10,7 @@
 		9C57F9111C02C1270067D69C /* tikyu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F9101C02C1270067D69C /* tikyu.jpg */; };
 		9C57F9131C0476440067D69C /* hoshi2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F9121C0476440067D69C /* hoshi2.jpg */; };
 		9C57F9171C073F3D0067D69C /* IMG_3430.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F9161C073F3D0067D69C /* IMG_3430.JPG */; };
+		9C57F91B1C0742C00067D69C /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F91A1C0742C00067D69C /* ios */; };
 		9C91029E1C007E5800592470 /* hoshi1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C91029D1C007E5800592470 /* hoshi1.jpg */; };
 		9C9102A01C008D3200592470 /* utyujin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C91029F1C008D3200592470 /* utyujin.jpg */; };
 		9CC2DF0C1BEEE34C0040C7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2DF0B1BEEE34C0040C7AA /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		9C57F9101C02C1270067D69C /* tikyu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tikyu.jpg; sourceTree = "<group>"; };
 		9C57F9121C0476440067D69C /* hoshi2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hoshi2.jpg; sourceTree = "<group>"; };
 		9C57F9161C073F3D0067D69C /* IMG_3430.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3430.JPG; sourceTree = "<group>"; };
+		9C57F91A1C0742C00067D69C /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = ../ios; sourceTree = "<group>"; };
 		9C91029D1C007E5800592470 /* hoshi1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hoshi1.jpg; sourceTree = "<group>"; };
 		9C91029F1C008D3200592470 /* utyujin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = utyujin.jpg; sourceTree = "<group>"; };
 		9CC2DF081BEEE34C0040C7AA /* uty-jin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uty-jin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				9CC2DF391BEEE4B90040C7AA /* FancyBalloons */,
+				9C57F91A1C0742C00067D69C /* ios */,
 				9CC2DF0B1BEEE34C0040C7AA /* AppDelegate.swift */,
 				9CC2DF411BEF15D30040C7AA /* MainViewController.swift */,
 				9CC2DF0D1BEEE34C0040C7AA /* GameViewController.swift */,
@@ -268,6 +271,7 @@
 				9CC2DF481BEF61150040C7AA /* haikei.png in Resources */,
 				9CC2DF3A1BEEE4B90040C7AA /* FancyBalloons in Resources */,
 				9CC2DF161BEEE34C0040C7AA /* LaunchScreen.storyboard in Resources */,
+				9C57F91B1C0742C00067D69C /* ios in Resources */,
 				9CC2DF501BFF3E2F0040C7AA /* utyujin1.PNG in Resources */,
 				9C57F9131C0476440067D69C /* hoshi2.jpg in Resources */,
 				9C57F9171C073F3D0067D69C /* IMG_3430.JPG in Resources */,
