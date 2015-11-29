@@ -175,7 +175,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 ball.removeFromParent()
                 fallUtyujin()
             }
-            
+        }
             func didBeginContact(contact: SKPhysicsContact) {
                 print(contact.bodyA.node!.name!)
                 if let col = contact.bodyA.node {
@@ -189,7 +189,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                     //音楽を入れる
             
             
-        }
+        
                 
     }
 

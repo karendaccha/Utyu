@@ -27,6 +27,7 @@ class StageViewController: UIViewController {
     @IBAction func d(){
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

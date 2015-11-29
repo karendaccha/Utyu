@@ -11,11 +11,11 @@
 		9C57F9131C0476440067D69C /* hoshi2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F9121C0476440067D69C /* hoshi2.jpg */; };
 		9C57F9171C073F3D0067D69C /* IMG_3430.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F9161C073F3D0067D69C /* IMG_3430.JPG */; };
 		9C57F91B1C0742C00067D69C /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F91A1C0742C00067D69C /* ios */; };
+		9C57F91D1C0ACCC90067D69C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F91C1C0ACCC90067D69C /* MainStoryboard.storyboard */; };
 		9C91029E1C007E5800592470 /* hoshi1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C91029D1C007E5800592470 /* hoshi1.jpg */; };
 		9C9102A01C008D3200592470 /* utyujin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C91029F1C008D3200592470 /* utyujin.jpg */; };
 		9CC2DF0C1BEEE34C0040C7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2DF0B1BEEE34C0040C7AA /* AppDelegate.swift */; };
 		9CC2DF0E1BEEE34C0040C7AA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2DF0D1BEEE34C0040C7AA /* GameViewController.swift */; };
-		9CC2DF111BEEE34C0040C7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DF0F1BEEE34C0040C7AA /* Main.storyboard */; };
 		9CC2DF131BEEE34C0040C7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DF121BEEE34C0040C7AA /* Assets.xcassets */; };
 		9CC2DF161BEEE34C0040C7AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DF141BEEE34C0040C7AA /* LaunchScreen.storyboard */; };
 		9CC2DF211BEEE34D0040C7AA /* uty_jinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2DF201BEEE34D0040C7AA /* uty_jinTests.swift */; };
@@ -51,12 +51,12 @@
 		9C57F9121C0476440067D69C /* hoshi2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hoshi2.jpg; sourceTree = "<group>"; };
 		9C57F9161C073F3D0067D69C /* IMG_3430.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3430.JPG; sourceTree = "<group>"; };
 		9C57F91A1C0742C00067D69C /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = ../ios; sourceTree = "<group>"; };
+		9C57F91C1C0ACCC90067D69C /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9C91029D1C007E5800592470 /* hoshi1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hoshi1.jpg; sourceTree = "<group>"; };
 		9C91029F1C008D3200592470 /* utyujin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = utyujin.jpg; sourceTree = "<group>"; };
 		9CC2DF081BEEE34C0040C7AA /* uty-jin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "uty-jin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC2DF0B1BEEE34C0040C7AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CC2DF0D1BEEE34C0040C7AA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		9CC2DF101BEEE34C0040C7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CC2DF121BEEE34C0040C7AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CC2DF151BEEE34C0040C7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CC2DF171BEEE34C0040C7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				9CC2DF0D1BEEE34C0040C7AA /* GameViewController.swift */,
 				9CC2DF4B1BF5FDBD0040C7AA /* GameScene.swift */,
 				9CC2DF431BEF15E30040C7AA /* StaeViewController.swift */,
-				9CC2DF0F1BEEE34C0040C7AA /* Main.storyboard */,
+				9C57F91C1C0ACCC90067D69C /* MainStoryboard.storyboard */,
 				9C57F9161C073F3D0067D69C /* IMG_3430.JPG */,
 				9CC2DF471BEF61150040C7AA /* haikei.png */,
 				9C91029D1C007E5800592470 /* hoshi1.jpg */,
@@ -276,10 +276,10 @@
 				9C57F9131C0476440067D69C /* hoshi2.jpg in Resources */,
 				9C57F9171C073F3D0067D69C /* IMG_3430.JPG in Resources */,
 				9CC2DF131BEEE34C0040C7AA /* Assets.xcassets in Resources */,
+				9C57F91D1C0ACCC90067D69C /* MainStoryboard.storyboard in Resources */,
 				9C57F9111C02C1270067D69C /* tikyu.jpg in Resources */,
 				9C91029E1C007E5800592470 /* hoshi1.jpg in Resources */,
 				9C9102A01C008D3200592470 /* utyujin.jpg in Resources */,
-				9CC2DF111BEEE34C0040C7AA /* Main.storyboard in Resources */,
 				9CC2DF4E1BF604CF0040C7AA /* utyujin2.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,14 +345,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9CC2DF0F1BEEE34C0040C7AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9CC2DF101BEEE34C0040C7AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9CC2DF141BEEE34C0040C7AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
