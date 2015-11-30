@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C02D0F31C0C92D600C04A99 /* Highscore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02D0F21C0C92D600C04A99 /* Highscore.swift */; };
 		9C57F9111C02C1270067D69C /* tikyu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F9101C02C1270067D69C /* tikyu.jpg */; };
 		9C57F9131C0476440067D69C /* hoshi2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F9121C0476440067D69C /* hoshi2.jpg */; };
 		9C57F9171C073F3D0067D69C /* IMG_3430.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 9C57F9161C073F3D0067D69C /* IMG_3430.JPG */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C02D0F21C0C92D600C04A99 /* Highscore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highscore.swift; sourceTree = "<group>"; };
 		9C57F9101C02C1270067D69C /* tikyu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tikyu.jpg; sourceTree = "<group>"; };
 		9C57F9121C0476440067D69C /* hoshi2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hoshi2.jpg; sourceTree = "<group>"; };
 		9C57F9161C073F3D0067D69C /* IMG_3430.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3430.JPG; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				9CC2DF0D1BEEE34C0040C7AA /* GameViewController.swift */,
 				9CC2DF4B1BF5FDBD0040C7AA /* GameScene.swift */,
 				9CC2DF431BEF15E30040C7AA /* StaeViewController.swift */,
+				9C02D0F21C0C92D600C04A99 /* Highscore.swift */,
 				9C57F91C1C0ACCC90067D69C /* MainStoryboard.storyboard */,
 				9C57F9161C073F3D0067D69C /* IMG_3430.JPG */,
 				9CC2DF471BEF61150040C7AA /* haikei.png */,
@@ -307,6 +310,7 @@
 			files = (
 				9CC2DF0E1BEEE34C0040C7AA /* GameViewController.swift in Sources */,
 				9CC2DF4C1BF5FDBD0040C7AA /* GameScene.swift in Sources */,
+				9C02D0F31C0C92D600C04A99 /* Highscore.swift in Sources */,
 				9CC2DF421BEF15D30040C7AA /* MainViewController.swift in Sources */,
 				9CC2DF441BEF15E30040C7AA /* StaeViewController.swift in Sources */,
 				9CC2DF0C1BEEE34C0040C7AA /* AppDelegate.swift in Sources */,
