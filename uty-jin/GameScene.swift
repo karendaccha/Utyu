@@ -134,7 +134,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         ball = SKSpriteNode(imageNamed:"utyujin1.PNG")
         ball.xScale = 0.1
         ball.yScale = 0.1
-        ball.position = CGPoint(x:190, y:500)
+        ball.position = CGPoint(x:185, y:500)
         ball.physicsBody?.mass = 3
         ball.name = "ball"
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
