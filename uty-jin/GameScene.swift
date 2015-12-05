@@ -60,66 +60,6 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         
         self.fallUtyujin()
         
-        
-    }
-
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        /* Called when a touch begins */
-        
-        for touch: AnyObject in touches {
-            
-            let location = touch.locationInNode(self)
-            
-            let node:SKNode! = self.nodeAtPoint(location);
-            if(node != nil){
-                if(node.name=="ball"){
-                    //nilじゃなかったら"ball"にする！
-                    gameStatus = GameStatus.kDragStart.rawValue;
-                    startPos = location;
-                }
-            }
-        }
-    }
-    
-    
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if(gameStatus == GameStatus.kDragStart.rawValue ){
-            //差を出してfirstで一番はじめの値を入力！touchにlocationを入れる。
-            let touch = touches.first
-            let touchPos:CGPoint = touch!.locationInNode(self);
-            ball.position = touchPos;
-        }
-    }
-    
-    func fallUtyujin(){
-        
-        ball = SKSpriteNode(imageNamed:"utyujin1.PNG")
-        ball.xScale = 0.1
-        ball.yScale = 0.1
-        ball.position = CGPoint(x:150, y:500)
-        ball.physicsBody?.mass = 3.0
-        ball.name = "ball"
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
-        ball.physicsBody?.categoryBitMask = ballCategory
-        tikyu.physicsBody?.contactTestBitMask = tikyuCategory
-        self.addChild(ball)
-        
-        //透明の置き台
-        clearSquare = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(width, 50))
-        clearSquare.position = CGPoint(x: CGRectGetMidX(self.frame),y: 200)
-        clearSquare.physicsBody = SKPhysicsBody(rectangleOfSize: clearSquare.frame.size)
-        clearSquare.physicsBody!.affectedByGravity = false
-        clearSquare.physicsBody!.dynamic = false
-        clearSquare.physicsBody!.contactTestBitMask = 1
-        clearSquare.physicsBody?.collisionBitMask = 1
-        clearSquare.name = "clearSquare"
-        self.addChild(clearSquare)
-        
-        NSTimer .scheduledTimerWithTimeInterval(3.5,target: self,
-            selector: Selector("destorySquare"),
-            userInfo: nil,
-            repeats: false)
-        
         //下のゴミ箱の部分
         tikyu = SKSpriteNode(imageNamed: "tikyu.jpg")
         tikyu.xScale = 0.6
@@ -154,46 +94,113 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         hosia.physicsBody!.dynamic = false
         hosia.physicsBody?.categoryBitMask = tikyuCategory
         hosia.physicsBody?.contactTestBitMask = ballCategory
-        hosia.name = "hosa"
+        hosia.name = "hosia"
         self.addChild(hosia)
-
-
         
         
         
-        //ボールが当たった時に作られる！
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        /* Called when a touch begins */
+        
+        for touch: AnyObject in touches {
+            
+            let location = touch.locationInNode(self)
+            
+            let node:SKNode! = self.nodeAtPoint(location);
+            if(node != nil){
+                if(node.name=="ball"){
+                    //nilじゃなかったら"ball"にする！
+                    gameStatus = GameStatus.kDragStart.rawValue;
+                    startPos = location;
+                }
+            }
+        }
+    }
+    
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if(gameStatus == GameStatus.kDragStart.rawValue ){
+            //差を出してfirstで一番はじめの値を入力！touchにlocationを入れる。
+            let touch = touches.first
+            let touchPos:CGPoint = touch!.locationInNode(self);
+            ball.position = touchPos;
+        }
+    }
+    
+    func fallUtyujin(){
+        
+        ball = SKSpriteNode(imageNamed:"utyujin1.PNG")
+        ball.xScale = 0.1
+        ball.yScale = 0.1
+        ball.position = CGPoint(x:190, y:500)
+        ball.physicsBody?.mass = 3
+        ball.name = "ball"
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
+        ball.physicsBody?.categoryBitMask = ballCategory
+        tikyu.physicsBody?.contactTestBitMask = tikyuCategory
+        self.addChild(ball)
+        /*
+        //透明の置き台
+        clearSquare = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(width, 50))
+        clearSquare.position = CGPoint(x: CGRectGetMidX(self.frame),y: 200)
+        clearSquare.physicsBody = SKPhysicsBody(rectangleOfSize: clearSquare.frame.size)
+        clearSquare.physicsBody!.affectedByGravity = false
+        clearSquare.physicsBody!.dynamic = false
+        clearSquare.physicsBody!.contactTestBitMask = 1
+        clearSquare.physicsBody?.collisionBitMask = 1
+        clearSquare.name = "clearSquare"
+        self.addChild(clearSquare)
+        
+        NSTimer .scheduledTimerWithTimeInterval(3.0,target: self,
+            selector: Selector("destorySquare"),
+            userInfo: nil,
+            repeats: false)
+        
+    }*/
+    
     func destorySquare(){
         clearSquare.removeFromParent() //消える
     }
-   
+    }
+    
     func didBeginContact(contact: SKPhysicsContact) {
-        print(contact.bodyA.node!.name!)
         if let col = contact.bodyA.node {
             if col.name == "tikyu" {
                 // 地球との衝突
+                print("hoge")
                 ball.removeFromParent()
                 fallUtyujin()
             }
-            
-            func didBeginContact(contact: SKPhysicsContact) {
-                print(contact.bodyA.node!.name!)
-                if let col = contact.bodyA.node {
-                    if col.name == "hosi" {
-                        // 星との衝突
-                        ball.removeFromParent()
-                        fallUtyujin()
-
-            
+            if col.name == "hosi"{
+                //　星との衝突
+                ball.removeFromParent()
+                fallUtyujin()
             }
-                    //音楽を入れる
-            
-            
+            if col.name == "hosia"{
+               // もう一つの星との衝突
+                ball.removeFromParent()
+                fallUtyujin()
         }
-                
     }
+}
+}
 
 
 
-        }}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

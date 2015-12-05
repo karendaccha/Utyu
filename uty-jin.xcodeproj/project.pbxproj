@@ -23,7 +23,6 @@
 		9CC2DF3A1BEEE4B90040C7AA /* FancyBalloons in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DF391BEEE4B90040C7AA /* FancyBalloons */; };
 		9CC2DF421BEF15D30040C7AA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2DF411BEF15D30040C7AA /* MainViewController.swift */; };
 		9CC2DF441BEF15E30040C7AA /* StaeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2DF431BEF15E30040C7AA /* StaeViewController.swift */; };
-		9CC2DF481BEF61150040C7AA /* haikei.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DF471BEF61150040C7AA /* haikei.png */; };
 		9CC2DF4C1BF5FDBD0040C7AA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2DF4B1BF5FDBD0040C7AA /* GameScene.swift */; };
 		9CC2DF4E1BF604CF0040C7AA /* utyujin2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DF4D1BF604CF0040C7AA /* utyujin2.PNG */; };
 		9CC2DF501BFF3E2F0040C7AA /* utyujin1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 9CC2DF4F1BFF3E2F0040C7AA /* utyujin1.PNG */; };
@@ -69,7 +68,6 @@
 		9CC2DF391BEEE4B90040C7AA /* FancyBalloons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FancyBalloons; sourceTree = "<group>"; };
 		9CC2DF411BEF15D30040C7AA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9CC2DF431BEF15E30040C7AA /* StaeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaeViewController.swift; sourceTree = "<group>"; };
-		9CC2DF471BEF61150040C7AA /* haikei.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haikei.png; sourceTree = "<group>"; };
 		9CC2DF4B1BF5FDBD0040C7AA /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		9CC2DF4D1BF604CF0040C7AA /* utyujin2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utyujin2.PNG; sourceTree = "<group>"; };
 		9CC2DF4F1BFF3E2F0040C7AA /* utyujin1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utyujin1.PNG; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				9CC2DF431BEF15E30040C7AA /* StaeViewController.swift */,
 				9CC2DF0F1BEEE34C0040C7AA /* Main.storyboard */,
 				9C57F9161C073F3D0067D69C /* IMG_3430.JPG */,
-				9CC2DF471BEF61150040C7AA /* haikei.png */,
 				9C91029D1C007E5800592470 /* hoshi1.jpg */,
 				9C57F9121C0476440067D69C /* hoshi2.jpg */,
 				9CC2DF4F1BFF3E2F0040C7AA /* utyujin1.PNG */,
@@ -268,7 +265,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC2DF481BEF61150040C7AA /* haikei.png in Resources */,
 				9CC2DF3A1BEEE4B90040C7AA /* FancyBalloons in Resources */,
 				9CC2DF161BEEE34C0040C7AA /* LaunchScreen.storyboard in Resources */,
 				9C57F91B1C0742C00067D69C /* ios in Resources */,
