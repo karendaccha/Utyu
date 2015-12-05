@@ -159,10 +159,9 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
             repeats: false)
         
     }*/
-    
+    }
     func destorySquare(){
         clearSquare.removeFromParent() //消える
-    }
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
