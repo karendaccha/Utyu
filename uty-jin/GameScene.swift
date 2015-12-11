@@ -100,6 +100,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         hosia.physicsBody?.contactTestBitMask = ballCategory
         hosia.name = "hosia"
         self.addChild(hosia)
+        //---------------------------------------------------------
         
         // UIImageViewを作成する.
         imageView = UIImageView(frame: CGRectMake(0,0,30,30))
@@ -139,6 +140,8 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         imageView.layer.position = CGPoint(x: 60, y: 70)
         
         self.view!.addSubview(imageView)
+        
+        //-----------------------------------------------------
         
        
         
