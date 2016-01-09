@@ -8,6 +8,8 @@
 
 import SpriteKit
 import CoreMotion
+import AVFoundation
+import AVFoundation
 
 enum GameStatus:Int{
     case kDragNone=0,  //初期値
@@ -25,6 +27,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     var gameStatus:Int = 0;
     var startPos:CGPoint!;
     var ball:SKSpriteNode!;
+    var baii1:SKSpriteNode!;
     
     var width:CGFloat = 0.0
     var height:CGFloat = 0.0
@@ -34,14 +37,22 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     var hosi = SKSpriteNode()
     var hosia = SKSpriteNode()
     
-    var imageView = UIImageView(frame: CGRectMake(0,200,20,20))
-    var imageViewa = UIImageView(frame: CGRectMake(30,200,40,20))
-    var imageViewb = UIImageView(frame: CGRectMake(60,200,60,20))
+    //var imageView = UIImageView(frame: CGRectMake(40,600,0.1,0.1))
+    /*var imageViewa = UIImageView(frame: CGRectMake(30,200,20,20))
+    var imageViewb = UIImageView(frame: CGRectMake(30,200,20,20))*/
+    var heartArray : [SKSpriteNode] = [SKSpriteNode(imageNamed: "ha-to.png"),SKSpriteNode(imageNamed: "ha-to.png"),SKSpriteNode(imageNamed: "ha-to.png")]
+    
+    
+    var audio:AVPlayer!
     
     let ballCategory: UInt32 = 0x1 << 0
     let tikyuCategory: UInt32 = 0x1 << 1
     
     override func didMoveToView(view: SKView) {
+        
+        let audioPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("by_chance", ofType: "mp3")!)
+        
+        audio = AVPlayer(URL:audioPath)
         
         width = UIScreen.mainScreen().bounds.size.width
         height = UIScreen.mainScreen().bounds.size.height
@@ -85,7 +96,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         hosi.physicsBody!.affectedByGravity = false
         hosi.physicsBody!.dynamic = false
         hosi.physicsBody?.categoryBitMask = tikyuCategory
-        hosi.physicsBody?.contactTestBitMask = ballCategory
+       hosi.physicsBody?.contactTestBitMask = ballCategory
         hosi.name = "hosi"
         self.addChild(hosi)
         
@@ -103,56 +114,57 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         //---------------------------------------------------------
         
         // UIImageViewを作成する.
-        imageView = UIImageView(frame: CGRectMake(0,0,30,30))
-        
-        // 表示する画像を設定する.
-        let image = UIImage(named: "ha-to.png")
-        
         // 画像をUIImageViewに設定する.
-        imageView.image = image
+        //ImageView.image = Image
         
         // 画像の表示する座標を指定する.
-        imageView.layer.position = CGPoint(x: 30, y: 70)
+        for var h = 0; h < heartArray.count; h++ {
+            heartArray[h].position = CGPointMake(CGFloat(40 + (20 * h)),600)
+            heartArray[h].xScale = 0.1
+            heartArray[h].yScale = 0.1
+            self.addChild(heartArray[h])
+        }
+        //ImageView.position = CGPointMake(40,600)
+        //ImageView.xScale = 0.1
+        //ImageView.yScale = 0.1
         
         
         // UIImageViewをViewに追加する.
-        self.view!.addSubview(imageView)
         
-        //ハート二つ目
         
-        imageViewa = UIImageView(frame: CGRectMake(0,30,60,30))
+        /*//ハート二つ目---------------------------------------
+        
+        ImageViewa = UIImageView(frame: CGRectMake(0,0,30,30))
         
         let imagea = UIImage(named: "ha-to.png")
         
-        imageView.image = imagea
+        ImageView.image = imagea
         
         imageView.layer.position = CGPoint(x: 60, y: 70)
         
         self.view!.addSubview(imageView)
         
         //ハート３個目
-        imageViewb = UIImageView(frame: CGRectMake(0,30,60,30))
+        imageViewb = UIImageView(frame: CGRectMake(0,0,30,30))
         
         let imageb = UIImage(named: "ha-to.png")
         
         imageView.image = imageb
         
-        imageView.layer.position = CGPoint(x: 60, y: 70)
-        
+        imageView.layer.position = CGPoint(x: 90, y: 70)
         self.view!.addSubview(imageView)
-        
-        //-----------------------------------------------------
-        
-       
-        
-        
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        /* Called when a touch begins */
-        
-        for touch: AnyObject in touches {
+        override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
             
+            imageb.hidden = !imageb.hidden
+*/
+            
+        }       //------------------------------------------------------
+    
+   
+        override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             
             let node:SKNode! = self.nodeAtPoint(location);
@@ -164,7 +176,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-    }
+            }
     
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -177,6 +189,8 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     }
     
     func fallUtyujin(){
+        //効果音--------------------------------------------------------
+        audio.play()
         
         ball = SKSpriteNode(imageNamed:"utyujin1.PNG")
         ball.xScale = 0.1
@@ -185,7 +199,6 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         ball.physicsBody?.mass = 3
         ball.name = "ball"
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
-        ball.physicsBody?.categoryBitMask = ballCategory
         tikyu.physicsBody?.contactTestBitMask = tikyuCategory
         self.addChild(ball)
         /*
@@ -201,11 +214,11 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         self.addChild(clearSquare)
         
         NSTimer .scheduledTimerWithTimeInterval(3.0,target: self,
-            selector: Selector("destorySquare"),
-            userInfo: nil,
-            repeats: false)
+        selector: Selector("destorySquare"),
+        userInfo: nil,
+        repeats: false)
         
-    }*/
+        }*/
     }
     func destorySquare(){
         clearSquare.removeFromParent() //消える
@@ -217,6 +230,10 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 // 地球との衝突
                 ball.removeFromParent()
                 fallUtyujin()
+                
+                
+                heartArray.last?.removeFromParent()
+                heartArray.removeLast()
             }
             if col.name == "hosi"{
                 //　星との衝突
@@ -224,12 +241,12 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 fallUtyujin()
             }
             if col.name == "hosia"{
-               // もう一つの星との衝突
+                // もう一つの星との衝突
                 ball.removeFromParent()
                 fallUtyujin()
-        }
+            }
             
-    }
+        }
     }
     class ViewController: UIViewController {
         
@@ -255,26 +272,28 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         }
         
         
-  
-   /* (id)initWithSize:(CGSize)size {
-    self = [super initWithSize:size];
-    if (self) {
-    SKLabelNode *titleLabel = [SKLabelNode labelNodeWithFontNamed:@"HelveticaNeue"];
-    titleLabel.text = @"BREAKOUT!";
-    titleLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-    titleLabel.fontSize = 50.0f;
-    [self addChild:titleLabel];
+        
+        
+        /* (id)initWithSize:(CGSize)size {
+        self = [super initWithSize:size];
+        if (self) {
+        SKLabelNode *titleLabel = [SKLabelNode labelNodeWithFontNamed:@"HelveticaNeue"];
+        titleLabel.text = @"BREAKOUT!";
+        titleLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        titleLabel.fontSize = 50.0f;
+        [self addChild:titleLabel];
+        }
+        return self;
+        }*/
     }
-    return self;
-    }*/
-}
-
-//効果音をつける
-//スコア画面、ゲーム終了画面を作る
-
-
-
-
+    
+    
+    //スコア画面、ゲーム終了画面を作る
+    //宇宙人がランダムで表示されるようにする
+    
+    
+    
+    
 }
 
 
