@@ -176,6 +176,8 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
+            
+            
             }
     
     
@@ -270,6 +272,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
             // UIImageViewをViewに追加する.
             self.view.addSubview(myImageView)
         }
+        
         
         
         

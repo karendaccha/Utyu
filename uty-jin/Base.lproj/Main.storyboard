@@ -29,18 +29,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="スクリーンショット 2015-12-11 16.36.02.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pbl-sD-Isp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_6328.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-63-zTw">
-                                <rect key="frame" x="0.0" y="62" width="320" height="448"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="がめんをタップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmM-sm-qmK">
                                 <rect key="frame" x="27" y="255" width="165" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-Sf-Gns">
-                                <rect key="frame" x="20" y="37" width="289" height="523"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -149,15 +143,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-qs-VMe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kkm-BY-E5J">
-                                <rect key="frame" x="40" y="235" width="234" height="145"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space3.png" translatesAutoresizingMaskIntoConstraints="NO" id="dOS-Bn-dT3">
-                                <rect key="frame" x="40" y="36" width="240" height="184"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space3.png" translatesAutoresizingMaskIntoConstraints="NO" id="9QK-lX-d3g">
-                                <rect key="frame" x="41" y="388" width="240" height="151"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkI-Dg-RTB">
                                 <rect key="frame" x="69" y="445" width="176" height="59"/>
                                 <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="34"/>
@@ -214,6 +199,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFU-in-8a4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lul-aM-ylO">
                                 <rect key="frame" x="20" y="131" width="280" height="80"/>
                             </imageView>
@@ -264,9 +252,6 @@
                                     <segue destination="Zwt-aJ-MNK" kind="modal" id="ryg-H9-HAj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFU-in-8a4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -286,11 +271,6 @@
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="NBh-2t-iVe" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="b7d-gQ-O2L">
-                                <rect key="frame" x="20" y="36" width="149" height="115"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -318,9 +298,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_6328.jpg" width="2448" height="3264"/>
-        <image name="Icon-60.png" width="60" height="60"/>
-        <image name="space3.png" width="1403" height="1221"/>
         <image name="スクリーンショット 2015-12-11 16.36.02.png" width="532" height="870"/>
     </resources>
     <inferredMetricsTieBreakers>
