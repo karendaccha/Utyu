@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Zwt-aJ-MNK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PRv-Fg-HAc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="FancyBalloons.ttf">
@@ -26,22 +26,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="スクリーンショット 2015-12-11 16.36.02.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pbl-sD-Isp">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="がめんをタップ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TmM-sm-qmK">
-                                <rect key="frame" x="27" y="255" width="165" height="58"/>
+                                <rect key="frame" x="78" y="250" width="165" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.93033070250000005" green="0.89767016070000005" blue="0.99292490430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="haikei.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pbl-sD-Isp">
+                                <rect key="frame" x="0.0" y="-127" width="469" height="695"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zw4-nI-4MU">
+                                <rect key="frame" x="20" y="63" width="261" height="455"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="280"/>
+            <point key="canvasLocation" x="-217" y="54"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="t3K-Aa-8fW">
@@ -55,11 +59,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="説明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxm-98-Ge6">
+                                <rect key="frame" x="164" y="66" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrr-Sb-hOZ">
-                                <rect key="frame" x="13" y="504" width="75" height="30"/>
+                                <rect key="frame" x="164" y="9" width="75" height="30"/>
                                 <state key="normal" title="←戻ろう！"/>
                                 <connections>
-                                    <segue destination="PRv-Fg-HAc" kind="modal" id="RUQ-r0-rTn"/>
+                                    <segue destination="PRv-Fg-HAc" kind="modal" id="fqV-YK-7T9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmH-lv-3TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="998"/>
+            <point key="canvasLocation" x="-56" y="815"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LAJ-qR-qSI">
@@ -82,17 +92,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-XU-Nzg">
-                                <rect key="frame" x="20" y="25" width="286" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ハイスコア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-XU-Nzg">
+                                <rect key="frame" x="20" y="28" width="286" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTA-0K-EJb">
-                                <rect key="frame" x="14" y="505" width="75" height="30"/>
+                                <rect key="frame" x="165" y="28" width="75" height="30"/>
                                 <state key="normal" title="←戻ろう！"/>
                                 <connections>
-                                    <segue destination="PRv-Fg-HAc" kind="modal" id="tOh-b3-DlD"/>
+                                    <segue destination="PRv-Fg-HAc" kind="modal" id="FhT-E3-VL1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,12 +112,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcb-rD-iSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="998"/>
+            <point key="canvasLocation" x="391" y="815"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller1-->
         <scene sceneID="FyJ-cL-xLN">
             <objects>
-                <viewController id="ZH0-bE-cET" sceneMemberID="viewController">
+                <viewController id="ZH0-bE-cET" customClass="GameViewController1" customModule="uty_jin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3q2-Em-NcE"/>
                         <viewControllerLayoutGuide type="bottom" id="Kil-A9-1v9"/>
@@ -120,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8q-oP-3ZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789" y="998"/>
+            <point key="canvasLocation" x="775" y="815"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hjW-dY-b02">
@@ -140,26 +150,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-qs-VMe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="haikei.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-qs-VMe">
+                                <rect key="frame" x="0.0" y="0.0" width="465" height="688"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="465" id="3In-Jw-abV"/>
+                                    <constraint firstAttribute="height" constant="688" id="Ypp-Rw-Vsd"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkI-Dg-RTB">
-                                <rect key="frame" x="69" y="445" width="176" height="59"/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="34"/>
-                                <state key="normal" title="ハイスコア">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="c" destination="PRv-Fg-HAc" eventType="touchUpInside" id="Eo1-Qz-p6c"/>
-                                    <action selector="c" destination="BYZ-38-t0r" eventType="touchUpInside" id="npW-YR-hDH"/>
-                                    <segue destination="RY8-uA-xOG" kind="modal" id="yt8-qe-88S"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqr-aB-z0O">
-                                <rect key="frame" x="69" y="95" width="183" height="66"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="39"/>
-                                <state key="normal" title="せつめい">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="61" y="106" width="183" height="67"/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="40"/>
+                                <state key="normal" title="かー">
+                                    <color key="titleColor" red="0.62009069250000004" green="1" blue="0.5283180703" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="a" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dK-yd-ZiN"/>
@@ -168,10 +170,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-TR-AGu">
-                                <rect key="frame" x="48" y="280" width="226" height="69"/>
+                                <rect key="frame" x="41" y="233" width="233" height="136"/>
                                 <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="43"/>
-                                <state key="normal" title="スターと">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="けー">
+                                    <color key="titleColor" red="0.87441366880000004" green="0.57823286470000002" blue="0.99292490430000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="b" destination="PRv-Fg-HAc" eventType="touchUpInside" id="GHc-f1-n9D"/>
@@ -185,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NsX-Au-4Yx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="280"/>
+            <point key="canvasLocation" x="325" y="84"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FfL-8L-cQW">
@@ -199,38 +201,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFU-in-8a4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lul-aM-ylO">
-                                <rect key="frame" x="20" y="131" width="280" height="80"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFh-io-BFm">
-                                <rect key="frame" x="20" y="373" width="280" height="80"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-zY-t5Y">
-                                <rect key="frame" x="20" y="253" width="280" height="80"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTr-ke-JzK">
-                                <rect key="frame" x="20" y="258" width="280" height="70"/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
-                                <state key="normal" title="ふつう">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="n9n-YT-hY9" kind="modal" id="LIc-E5-iZe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT5-1g-TR5">
-                                <rect key="frame" x="15" y="378" width="280" height="70"/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
-                                <state key="normal" title="むずかしい">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ZH0-bE-cET" kind="modal" id="ZaA-Ak-f9P"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMl-OA-muj">
                                 <rect key="frame" x="20" y="514" width="101" height="37"/>
                                 <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="25"/>
@@ -242,15 +212,33 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRH-1D-f8a">
-                                <rect key="frame" x="20" y="131" width="280" height="70"/>
+                                <rect key="frame" x="20" y="93" width="280" height="70"/>
                                 <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
-                                <state key="normal" title="かんたん">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="おー">
+                                    <color key="titleColor" red="0.93033070250000005" green="0.89767016070000005" blue="0.99292490430000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Zwt-aJ-MNK" kind="modal" id="ryg-H9-HAj"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT5-1g-TR5">
+                                <rect key="frame" x="20" y="408" width="280" height="70"/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
+                                <state key="normal" title="わー">
+                                    <color key="titleColor" red="0.62009069250000004" green="1" blue="0.5283180703" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZH0-bE-cET" kind="modal" id="ZaA-Ak-f9P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcM-Jm-F0Z">
+                                <rect key="frame" x="120" y="265" width="96" height="60"/>
+                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
+                                <state key="normal" title="うー">
+                                    <color key="titleColor" red="0.87441366880000004" green="0.57823286470000002" blue="0.99292490430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.30151753549999999" green="1" blue="0.99516766099999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -258,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRG-jS-fBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789" y="280"/>
+            <point key="canvasLocation" x="749" y="84"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="1v9-1d-Z4o">
@@ -276,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wX-4R-YIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="280"/>
+            <point key="canvasLocation" x="1203" y="84"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Hpe-d5-mEd">
@@ -294,13 +282,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Iv-vZ-aw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="280"/>
+            <point key="canvasLocation" x="1397" y="1392"/>
         </scene>
     </scenes>
     <resources>
-        <image name="スクリーンショット 2015-12-11 16.36.02.png" width="532" height="870"/>
+        <image name="haikei.png" width="532" height="870"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GBZ-Aj-r9k"/>
+        <segue reference="fqV-YK-7T9"/>
     </inferredMetricsTieBreakers>
 </document>

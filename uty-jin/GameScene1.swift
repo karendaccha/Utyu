@@ -1,9 +1,9 @@
 //
-//  Game Scene.swift
+//  File.swift
 //  uty-jin
 //
-//  Created by KAREN on 2015/11/13.
-//  Copyright © 2015年 KAREN. All rights reserved.
+//  Created by KAREN on 2016/04/03.
+//  Copyright © 2016年 KAREN. All rights reserved.
 //
 
 import SpriteKit
@@ -11,7 +11,7 @@ import CoreMotion
 import AVFoundation
 import AVFoundation
 
-enum GameStatus:Int{
+enum GameStatus1:Int{
     case kDragNone=0,  //初期値
     kDragStart, //Drag開始
     kDragEnd   //Drag終了
@@ -20,13 +20,14 @@ enum GameStatus:Int{
 
 
 
-class GameScene : SKScene, SKPhysicsContactDelegate {
+class GameScene1 : SKScene, SKPhysicsContactDelegate {
     
     var ballCollection: [SKShapeNode] = []
     var last:CFTimeInterval!
     var gameStatus:Int = 0;
     var startPos:CGPoint!;
     var ball:SKSpriteNode!;
+    var ball1:SKSpriteNode!;
     var baii1:SKSpriteNode!;
     var haikei:SKSpriteNode!;
     
@@ -37,6 +38,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     var tikyu = SKSpriteNode()
     var hosi = SKSpriteNode()
     var hosia = SKSpriteNode()
+    var hosib = SKSpriteNode()
     
     var point:Int = 0
     
@@ -70,7 +72,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         view.showsFPS = false
         view.showsNodeCount = false
         
-        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -3.0)
+        self.physicsWorld.gravity = CGVector(dx: 1.0, dy: -3.0)
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 0, y: 0, width: frame.width, height:
             frame.height))
         self.physicsWorld.contactDelegate = self
@@ -90,7 +92,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         haikei.xScale = 2.5
         haikei.position = CGPoint(x: 0,y: 0)
         self.addChild(haikei)
-       
+        
         
         //下のゴミ箱の部分
         tikyu = SKSpriteNode(imageNamed: "tikyu.png")
@@ -128,6 +130,19 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         hosia.physicsBody?.contactTestBitMask = ballCategory
         hosia.name = "hosia"
         self.addChild(hosia)
+        
+        hosib = SKSpriteNode(imageNamed: "")
+        hosib.xScale = 0.15
+        hosib.yScale = 0.15
+        hosib.position = CGPoint(x: 250,y: 550)
+        hosib.physicsBody = SKPhysicsBody(rectangleOfSize: hosi.frame.size)
+        hosib.physicsBody!.affectedByGravity = false
+        hosib.physicsBody!.dynamic = false
+        hosib.physicsBody?.categoryBitMask = tikyuCategory
+        hosib.physicsBody?.contactTestBitMask = ballCategory
+        hosib.name = "hosib"
+        self.addChild(hosib)
+
         //---------------------------------------------------------
         
         // UIImageViewを作成する.
@@ -180,11 +195,11 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
          
          imageb.hidden = !imageb.hidden
          */
-
+        
         
     }
     
-//------------------------------------------------------
+    //------------------------------------------------------
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -215,7 +230,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     }
     
     func fallUtyujin(){
-               audio.play()
+        audio.play()
         
         ball = SKSpriteNode(imageNamed:"utyujin1.PNG")
         ball.xScale = 0.1
@@ -224,6 +239,16 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         ball.physicsBody?.mass = 3
         ball.name = "ball"
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
+        tikyu.physicsBody?.contactTestBitMask = tikyuCategory
+        self.addChild(ball)
+        
+        ball1 = SKSpriteNode(imageNamed:"utyujin.png")
+        ball1.xScale = 0.1
+        ball1.yScale = 0.1
+        ball1.position = CGPoint(x:185, y:500)
+        ball1.physicsBody?.mass = 4
+        ball1.name = "ball1"
+        ball1.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
         tikyu.physicsBody?.contactTestBitMask = tikyuCategory
         self.addChild(ball)
         /*
@@ -259,7 +284,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 
                 heartArray.last?.removeFromParent()
                 heartArray.removeLast()
-                }
+            }
             if col.name == "hosi"{
                 //　星との衝突
                 ball.removeFromParent()
@@ -271,66 +296,61 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 fallUtyujin()
             }
             if heartArray.count == 0 {
-            
-            let myLabel = SKLabelNode(fontNamed: "Chalkduster")
-            
-            
-            myLabel.text = "gameover"
-            
-            
-            myLabel.fontSize = 40
-            
-            
-            myLabel.position = CGPoint(x:self.frame.midX, y:self.frame.midY)
-            
-            
-            self.addChild(myLabel)
-            
-           
-            
-            
-            }
-            if heartArray.count == 0{
-                 ball.removeFromParent()
-                let fallUtyujin = false
-            }
-            
-        
-        
-        
-        
-    
-    
-        
-    
-        
-               /*
-        class ViewController: UIViewController {
-            
-            private var myImageView: UIImageView!
-            
-            override func viewDidLoad() {
-                super.viewDidLoad()
                 
-                // UIImageViewを作成する.
-                myImageView = UIImageView(frame: CGRectMake(0,0,100,120))
+                let myLabel = SKLabelNode(fontNamed: "Chalkduster")
                 
-                // 表示する画像を設定する.
-                let myImage = UIImage(named: ".png")
                 
-                // 画像をUIImageViewに設定する.
-                myImageView.image = myImage
+                myLabel.text = "gameover"
                 
-                // 画像の表示する座標を指定する.
-                myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200.0)
                 
-                // UIImageViewをViewに追加する.
-                self.view.addSubview(myImageView)
+                myLabel.fontSize = 40
+                
+                
+                myLabel.position = CGPoint(x:self.frame.midX, y:self.frame.midY)
+                
+                
+                self.addChild(myLabel)
+                
+                
+                
+                
             }
             
             
             
-            /* (id)initWithSize:(CGSize)size {
+            
+            
+            
+            
+            
+            
+            /*
+             class ViewController: UIViewController {
+             
+             private var myImageView: UIImageView!
+             
+             override func viewDidLoad() {
+             super.viewDidLoad()
+             
+             // UIImageViewを作成する.
+             myImageView = UIImageView(frame: CGRectMake(0,0,100,120))
+             
+             // 表示する画像を設定する.
+             let myImage = UIImage(named: ".png")
+             
+             // 画像をUIImageViewに設定する.
+             myImageView.image = myImage
+             
+             // 画像の表示する座標を指定する.
+             myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200.0)
+             
+             // UIImageViewをViewに追加する.
+             self.view.addSubview(myImageView)
+             }
+             
+             
+             
+             /* (id)initWithSize:(CGSize)size {
              self = [super initWithSize:size];
              if (self) {
              SKLabelNode *titleLabel = [SKLabelNode labelNodeWithFontNamed:@"HelveticaNeue"];
@@ -341,14 +361,14 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
              }
              return self;
              }*/
-        }
-        
-        */
-
-    
-
-
-
+             }
+             
+             */
+            
+            
+            
+            
+            
         }
     }
 }
@@ -362,7 +382,8 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
 
 
 
-    
-        
-        
+
+
+
+
 
