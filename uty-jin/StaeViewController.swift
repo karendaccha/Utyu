@@ -15,21 +15,7 @@ class StageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    @IBAction func a(){
     
-    }
-    @IBAction func b(){
-    
-    }
-    @IBAction func c(){
-        
-    }
-    @IBAction func d(){
-        
-    }
-    @IBAction func e(){
-        
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,5 +31,4 @@ class StageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PRv-Fg-HAc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PRv-Fg-HAc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="FancyBalloons.ttf">
             <string>FancyBalloons</string>
-            <string>FancyBalloons</string>
-            <string>FancyBalloons</string>
-            <string>FancyBalloons</string>
-            <string>FancyBalloons</string>
-            <string>FancyBalloons</string>
+        </mutableArray>
+        <mutableArray key="KTEGAKI.ttf">
+            <string>KAWAIITEGAKIMOJI</string>
+            <string>KAWAIITEGAKIMOJI</string>
+            <string>KAWAIITEGAKIMOJI</string>
+            <string>KAWAIITEGAKIMOJI</string>
+            <string>KAWAIITEGAKIMOJI</string>
+            <string>KAWAIITEGAKIMOJI</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -48,6 +51,30 @@
             <point key="canvasLocation" x="-217" y="54"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="mJ5-2p-nm1">
+            <objects>
+                <viewController id="w6v-No-LJu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mpm-Dn-6F9"/>
+                        <viewControllerLayoutGuide type="bottom" id="FrW-1P-YHe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eui-0j-s6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USF-JJ-eEM">
+                                <rect key="frame" x="129" y="404" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OeE-g1-hb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-405" y="815"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="t3K-Aa-8fW">
             <objects>
                 <viewController id="0Rf-QR-jR9" sceneMemberID="viewController">
@@ -59,15 +86,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="haikei.png" translatesAutoresizingMaskIntoConstraints="NO" id="0be-PS-yAF">
+                                <rect key="frame" x="0.0" y="0.0" width="370" height="594"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="IFZ-AA-qj6"/>
+                                    <constraint firstAttribute="height" constant="594" id="PPe-go-z2h"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="説明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxm-98-Ge6">
                                 <rect key="frame" x="164" y="66" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCX-wg-vnh">
+                                <rect key="frame" x="261" y="518" width="39" height="30"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" red="0.30151753549999999" green="1" blue="0.99516766099999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="w6v-No-LJu" kind="modal" id="dQI-q1-Gdh"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrr-Sb-hOZ">
-                                <rect key="frame" x="164" y="9" width="75" height="30"/>
-                                <state key="normal" title="←戻ろう！"/>
+                                <rect key="frame" x="20" y="518" width="40" height="30"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="0.62009069250000004" green="1" blue="0.5283180703" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="PRv-Fg-HAc" kind="modal" id="fqV-YK-7T9"/>
                                 </connections>
@@ -105,6 +150,9 @@
                                     <segue destination="PRv-Fg-HAc" kind="modal" id="FhT-E3-VL1"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RwJ-1Z-57W">
+                                <rect key="frame" x="48" y="267" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -122,7 +170,7 @@
                         <viewControllerLayoutGuide type="top" id="3q2-Em-NcE"/>
                         <viewControllerLayoutGuide type="bottom" id="Kil-A9-1v9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hz1-Rg-6Th">
+                    <view key="view" contentMode="scaleToFill" id="hz1-Rg-6Th" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,28 +205,49 @@
                                     <constraint firstAttribute="height" constant="688" id="Ypp-Rw-Vsd"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="スクリーンショット 2016-12-18 22.54.50.png" translatesAutoresizingMaskIntoConstraints="NO" id="E8y-IY-Vcg">
+                                <rect key="frame" x="-22" y="14" width="241" height="134"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="スクリーンショット 2016-12-18 23.01.31.png" translatesAutoresizingMaskIntoConstraints="NO" id="ngH-Ls-XSw">
+                                <rect key="frame" x="-29" y="348" width="240" height="220"/>
+                                <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="スクリーンショット 2016-12-18 23.00.22.png" translatesAutoresizingMaskIntoConstraints="NO" id="TPB-rG-XVW">
+                                <rect key="frame" x="96" y="177" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-TR-AGu">
+                                <rect key="frame" x="79" y="156" width="233" height="136"/>
+                                <fontDescription key="fontDescription" name="KAWAIITEGAKIMOJI" family="KAWAIITEGAKIMOJI" pointSize="43"/>
+                                <state key="normal" title="highscore">
+                                    <color key="titleColor" red="0.87441366880000004" green="0.57823286470000002" blue="0.99292490430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="b" destination="PRv-Fg-HAc" eventType="touchUpInside" id="IXv-wL-8dR"/>
+                                    <action selector="b" destination="BYZ-38-t0r" eventType="touchUpInside" id="KK6-ML-gXA"/>
+                                    <segue destination="l7K-ed-M5h" kind="modal" id="eEV-K6-2UB"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqr-aB-z0O">
-                                <rect key="frame" x="61" y="106" width="183" height="67"/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="40"/>
-                                <state key="normal" title="かー">
+                                <rect key="frame" x="-19" y="28" width="236" height="67"/>
+                                <fontDescription key="fontDescription" name="KAWAIITEGAKIMOJI" family="KAWAIITEGAKIMOJI" pointSize="43"/>
+                                <state key="normal" title="start">
                                     <color key="titleColor" red="0.62009069250000004" green="1" blue="0.5283180703" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="a" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dK-yd-ZiN"/>
-                                    <action selector="a" destination="PRv-Fg-HAc" eventType="touchUpInside" id="VBa-lA-ZA7"/>
+                                    <action selector="a" destination="PRv-Fg-HAc" eventType="touchUpInside" id="4UC-L6-y4y"/>
                                     <segue destination="0Rf-QR-jR9" kind="modal" id="HaP-YD-6FL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-TR-AGu">
-                                <rect key="frame" x="41" y="233" width="233" height="136"/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="43"/>
-                                <state key="normal" title="けー">
-                                    <color key="titleColor" red="0.87441366880000004" green="0.57823286470000002" blue="0.99292490430000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNR-gC-o8o">
+                                <rect key="frame" x="21" y="348" width="169" height="91"/>
+                                <fontDescription key="fontDescription" name="KAWAIITEGAKIMOJI" family="KAWAIITEGAKIMOJI" pointSize="41"/>
+                                <state key="normal" title="how">
+                                    <color key="titleColor" red="0.995726864640884" green="0.49433610108070342" blue="0.65712660904249809" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="b" destination="PRv-Fg-HAc" eventType="touchUpInside" id="GHc-f1-n9D"/>
-                                    <action selector="b" destination="BYZ-38-t0r" eventType="touchUpInside" id="KK6-ML-gXA"/>
-                                    <segue destination="l7K-ed-M5h" kind="modal" id="eEV-K6-2UB"/>
+                                    <action selector="c" destination="PRv-Fg-HAc" eventType="touchUpInside" id="zFw-db-vDQ"/>
+                                    <segue destination="RY8-uA-xOG" kind="modal" id="PQc-U8-Ux5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,37 +277,44 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="d" destination="l7K-ed-M5h" eventType="touchUpInside" id="Lyk-Ez-z0t"/>
                                     <segue destination="PRv-Fg-HAc" kind="modal" id="GBZ-Aj-r9k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRH-1D-f8a">
                                 <rect key="frame" x="20" y="93" width="280" height="70"/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
-                                <state key="normal" title="おー">
+                                <fontDescription key="fontDescription" name="KAWAIITEGAKIMOJI" family="KAWAIITEGAKIMOJI" pointSize="48"/>
+                                <state key="normal" title="れべるいち">
                                     <color key="titleColor" red="0.93033070250000005" green="0.89767016070000005" blue="0.99292490430000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="a" destination="l7K-ed-M5h" eventType="touchUpInside" id="slz-eW-cPV"/>
                                     <segue destination="Zwt-aJ-MNK" kind="modal" id="ryg-H9-HAj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT5-1g-TR5">
                                 <rect key="frame" x="20" y="408" width="280" height="70"/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
-                                <state key="normal" title="わー">
+                                <fontDescription key="fontDescription" name="KAWAIITEGAKIMOJI" family="KAWAIITEGAKIMOJI" pointSize="48"/>
+                                <state key="normal" title="れべるさん">
                                     <color key="titleColor" red="0.62009069250000004" green="1" blue="0.5283180703" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="c" destination="l7K-ed-M5h" eventType="touchUpInside" id="b9N-F1-dIl"/>
                                     <segue destination="ZH0-bE-cET" kind="modal" id="ZaA-Ak-f9P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcM-Jm-F0Z">
-                                <rect key="frame" x="120" y="265" width="96" height="60"/>
-                                <fontDescription key="fontDescription" name="FancyBalloons" family="FancyBalloons" pointSize="48"/>
-                                <state key="normal" title="うー">
+                                <rect key="frame" x="62" y="265" width="219" height="60"/>
+                                <fontDescription key="fontDescription" name="KAWAIITEGAKIMOJI" family="KAWAIITEGAKIMOJI" pointSize="48"/>
+                                <state key="normal" title="れべるに">
                                     <color key="titleColor" red="0.87441366880000004" green="0.57823286470000002" blue="0.99292490430000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.30151753549999999" green="1" blue="0.99516766099999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="b" destination="l7K-ed-M5h" eventType="touchUpInside" id="qJn-6e-0xe"/>
+                                    <segue destination="Vzw-ue-SEc" kind="modal" id="f1v-v7-7lb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -266,6 +342,24 @@
             </objects>
             <point key="canvasLocation" x="1203" y="84"/>
         </scene>
+        <!--Game View Controller2-->
+        <scene sceneID="VrJ-28-xFt">
+            <objects>
+                <viewController id="Vzw-ue-SEc" customClass="GameViewController2" customModule="uty_jin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dyx-87-xLL"/>
+                        <viewControllerLayoutGuide type="bottom" id="cFg-X9-d3O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JJh-gc-KAN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNC-Ib-Fta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1157" y="815"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="Hpe-d5-mEd">
             <objects>
@@ -287,8 +381,11 @@
     </scenes>
     <resources>
         <image name="haikei.png" width="532" height="870"/>
+        <image name="スクリーンショット 2016-12-18 22.54.50.png" width="469" height="321"/>
+        <image name="スクリーンショット 2016-12-18 23.00.22.png" width="315" height="214"/>
+        <image name="スクリーンショット 2016-12-18 23.01.31.png" width="453" height="596"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fqV-YK-7T9"/>
+        <segue reference="GBZ-Aj-r9k"/>
     </inferredMetricsTieBreakers>
 </document>

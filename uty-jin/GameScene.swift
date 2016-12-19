@@ -27,7 +27,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     var gameStatus:Int = 0;
     var startPos:CGPoint!;
     var ball:SKSpriteNode!;
-    var baii1:SKSpriteNode!;
+    var ball1:SKSpriteNode!;
     var haikei:SKSpriteNode!;
     
     var width:CGFloat = 0.0
@@ -39,6 +39,8 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     var hosia = SKSpriteNode()
     
     var point:Int = 0
+    
+    var score:Int = 0
     
     let ImageViewa = UIImage(named:"haikei.png")
     
@@ -90,7 +92,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         haikei.xScale = 2.5
         haikei.position = CGPoint(x: 0,y: 0)
         self.addChild(haikei)
-       
+        
         
         //下のゴミ箱の部分
         tikyu = SKSpriteNode(imageNamed: "tikyu.png")
@@ -141,7 +143,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
             heartArray[h].yScale = 0.1
             self.addChild(heartArray[h])
         }
-        
+                
         
         
         
@@ -180,11 +182,11 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
          
          imageb.hidden = !imageb.hidden
          */
-
+        
         
     }
     
-//------------------------------------------------------
+    //------------------------------------------------------
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -215,7 +217,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     }
     
     func fallUtyujin(){
-               audio.play()
+        audio.play()
         
         ball = SKSpriteNode(imageNamed:"utyujin1.PNG")
         ball.xScale = 0.1
@@ -257,9 +259,11 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 fallUtyujin()
                 
                 
+                
+                
                 heartArray.last?.removeFromParent()
                 heartArray.removeLast()
-                }
+            }
             if col.name == "hosi"{
                 //　星との衝突
                 ball.removeFromParent()
@@ -269,88 +273,58 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
                 // もう一つの星との衝突
                 ball.removeFromParent()
                 fallUtyujin()
+                score = +100
             }
             if heartArray.count == 0 {
-            
-            let myLabel = SKLabelNode(fontNamed: "Chalkduster")
-            
-            
-            myLabel.text = "gameover"
-            
-            
-            myLabel.fontSize = 40
-            
-            
-            myLabel.position = CGPoint(x:self.frame.midX, y:self.frame.midY)
-            
-            
-            self.addChild(myLabel)
-            
-           
-            
-            
-            }
-            if heartArray.count == 0{
-                 ball.removeFromParent()
-                let fallUtyujin = false
-            }
-            
-        
-        
-        
-        
-    
-    
-        
-    
-        
-               /*
-        class ViewController: UIViewController {
-            
-            private var myImageView: UIImageView!
-            
-            override func viewDidLoad() {
-                super.viewDidLoad()
                 
-                // UIImageViewを作成する.
-                myImageView = UIImageView(frame: CGRectMake(0,0,100,120))
+                let myLabel = SKLabelNode(fontNamed: "Chalkduster")
                 
-                // 表示する画像を設定する.
-                let myImage = UIImage(named: ".png")
                 
-                // 画像をUIImageViewに設定する.
-                myImageView.image = myImage
+                myLabel.text = "gameover"
                 
-                // 画像の表示する座標を指定する.
-                myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200.0)
                 
-                // UIImageViewをViewに追加する.
-                self.view.addSubview(myImageView)
+                myLabel.fontSize = 40
+                
+                
+                myLabel.position = CGPoint(x:self.frame.midX, y:self.frame.midY)
+                
+                
+                self.addChild(myLabel)
+                
+                let myButton = UIButton()
+                myButton.frame = CGRectMake(0,0,100,400)
+                
+                myButton.layer.masksToBounds = true
+               
+                myButton.setTitle("もう1回💦", forState: UIControlState.Normal)
+                myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+                myButton.setTitle("Done", forState: UIControlState.Highlighted)
+                myButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
+                myButton.layer.cornerRadius = 50.0
+                myButton.layer.position = CGPoint(x: self.view!.frame.width/2, y:100)
+                myButton.addTarget(self, action: "bViewController", forControlEvents: .TouchUpInside)
+                self.view!.addSubview(myButton);
+                
+                
+                
             }
             
             
-            
-            /* (id)initWithSize:(CGSize)size {
-             self = [super initWithSize:size];
-             if (self) {
-             SKLabelNode *titleLabel = [SKLabelNode labelNodeWithFontNamed:@"HelveticaNeue"];
-             titleLabel.text = @"BREAKOUT!";
-             titleLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-             titleLabel.fontSize = 50.0f;
-             [self addChild:titleLabel];
-             }
-             return self;
-             }*/
+        }
+        if heartArray.count == 0{
+            ball.removeFromParent()
+            let fallUtyujin = false
         }
         
-        */
-
-    
-
-
-
-        }
+        
     }
+    
+    
+    func onClickMyButton(sender : UIButton){
+        
+    }
+
+        
 }
 
 
@@ -362,7 +336,9 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
 
 
 
-    
-        
-        
+
+
+
+
+
 

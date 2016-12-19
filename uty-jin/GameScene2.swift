@@ -1,17 +1,18 @@
 //
-//  File.swift
+//  GameScene2.swift
 //  uty-jin
 //
-//  Created by KAREN on 2016/04/03.
+//  Created by KAREN on 2016/04/04.
 //  Copyright © 2016年 KAREN. All rights reserved.
 //
+
 
 import SpriteKit
 import CoreMotion
 import AVFoundation
 import AVFoundation
 
-enum GameStatus1:Int{
+enum GameStatus2:Int{
     case kDragNone=0,  //初期値
     kDragStart, //Drag開始
     kDragEnd   //Drag終了
@@ -20,7 +21,7 @@ enum GameStatus1:Int{
 
 
 
-class GameScene1 : SKScene, SKPhysicsContactDelegate {
+class GameScene2 : SKScene, SKPhysicsContactDelegate {
     
     var ballCollection: [SKShapeNode] = []
     var last:CFTimeInterval!
@@ -29,7 +30,7 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
     var ball:SKSpriteNode!;
     var ball1:SKSpriteNode!;
     var ball2:SKSpriteNode!;
-    
+    //var baii1:SKSpriteNode!;
     var haikei:SKSpriteNode!;
     
     var width:CGFloat = 0.0
@@ -46,7 +47,7 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
     
     let ImageViewa = UIImage(named:"haikei.png")
     
-        var gameFlg = false
+        
     
     //var imageView = UIImageView(frame: CGRectMake(40,600,0.1,0.1))
     /*var imageViewa = UIImageView(frame: CGRectMake(30,200,20,20))
@@ -57,9 +58,6 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
     var audio:AVPlayer!
     
     let ballCategory: UInt32 = 0x1 << 0
-    let ball1Category: UInt32 = 0x1 << 0
-    let ball2Category: UInt32 = 0x1 << 0
-    
     let tikyuCategory: UInt32 = 0x1 << 1
     
     override func didMoveToView(view: SKView) {
@@ -114,7 +112,7 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
         hosi = SKSpriteNode(imageNamed:"hoshi1.png")
         hosi.xScale = 0.14
         hosi.yScale = 0.15
-        hosi.position = CGPoint(x: 50,y: 400)
+        hosi.position = CGPoint(x: 55,y: 400)
         hosi.physicsBody = SKPhysicsBody(rectangleOfSize: hosi.frame.size)
         hosi.physicsBody!.affectedByGravity = false
         hosi.physicsBody!.dynamic = false
@@ -126,7 +124,7 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
         hosia = SKSpriteNode(imageNamed: "hoshi2.png")
         hosia.xScale = 0.14
         hosia.yScale = 0.14
-        hosia.position = CGPoint(x: 170,y: 565)
+        hosia.position = CGPoint(x: 300,y: 500)
         hosia.physicsBody = SKPhysicsBody(rectangleOfSize: hosi.frame.size)
         hosia.physicsBody!.affectedByGravity = false
         hosia.physicsBody!.dynamic = false
@@ -146,10 +144,11 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
         hosib.physicsBody?.contactTestBitMask = ballCategory
         hosib.name = "hosib"
         self.addChild(hosib)
+
         
         
-
-
+        
+        
         //---------------------------------------------------------
         
         // UIImageViewを作成する.
@@ -220,20 +219,10 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
                     gameStatus = GameStatus.kDragStart.rawValue;
                     startPos = location;
                 }
-                if(node.name=="ball1"){
-                
-                   gameStatus = GameStatus.kDragStart.rawValue;
-                   startPos = location;
             }
-                if(node.name=="Ball2"){
-                    
-                    gameStatus = GameStatus.kDragStart.rawValue;
-                    startPos = location;
-                }
         }
         
         
-    }
     }
     
     
@@ -250,29 +239,29 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
         audio.play()
         
         ball = SKSpriteNode(imageNamed:"utyujin.png")
-        ball.xScale = 0.25
-        ball.yScale = 0.25
-        ball.position = CGPoint(x:185, y:450)
-        ball.physicsBody?.mass = 1
+        ball.xScale = 0.3
+        ball.yScale = 0.3
+        ball.position = CGPoint(x:185, y:500)
+        ball.physicsBody?.mass = 0.1
         ball.name = "ball"
         ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
         tikyu.physicsBody?.contactTestBitMask = tikyuCategory
         self.addChild(ball)
         
-        ball1 = SKSpriteNode(imageNamed:"utyujin1.PNG")
-        ball1.xScale = 0.1
-        ball1.yScale = 0.1
-        ball1.position = CGPoint(x:185, y:500)
-        ball1.physicsBody?.mass = 1
-        ball1.name = "ball1"
-        ball1.physicsBody = SKPhysicsBody(circleOfRadius: ball1.size.width/2)
-        tikyu.physicsBody?.contactTestBitMask = tikyuCategory
-        self.addChild(ball1)
+         ball1 = SKSpriteNode(imageNamed:"utyujin1.PNG")
+         ball1.xScale = 0.1
+         ball1.yScale = 0.1
+         ball1.position = CGPoint(x:185, y:500)
+         ball1.physicsBody?.mass = 1
+         ball1.name = "ball1"
+         ball1.physicsBody = SKPhysicsBody(circleOfRadius: ball1.size.width/2)
+         tikyu.physicsBody?.contactTestBitMask = tikyuCategory
+         self.addChild(ball1)
         
-        ball2 = SKSpriteNode(imageNamed:"utyujin2.PNG")
-        ball2.xScale = 0.25
-        ball2.yScale = 0.25
-        ball2.position = CGPoint(x:185, y:450)
+        ball2 = SKSpriteNode(imageNamed:"utyujin2.png")
+        ball2.xScale = 0.1
+        ball2.yScale = 0.1
+        ball2.position = CGPoint(x:185, y:500)
         ball2.physicsBody?.mass = 1
         ball2.name = "ball2"
         ball2.physicsBody = SKPhysicsBody(circleOfRadius: ball2.size.width/2)
@@ -306,8 +295,6 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
             if col.name == "tikyu" {
                 // 地球との衝突
                 ball.removeFromParent()
-                ball1.removeFromParent()
-                ball2.removeFromParent()
                 fallUtyujin()
                 
                 
@@ -317,17 +304,14 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
             if col.name == "hosi"{
                 //　星との衝突
                 ball.removeFromParent()
-                ball1.removeFromParent()
                 fallUtyujin()
             }
             if col.name == "hosia"{
                 // もう一つの星との衝突
-                ball1.removeFromParent()
-                ball2.removeFromParent()
+                ball.removeFromParent()
                 fallUtyujin()
             }
             if col.name == "hosib"{
-                ball2.removeFromParent()
                 ball.removeFromParent()
                 fallUtyujin()
             }
@@ -354,8 +338,8 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
             if heartArray.count == 0{
                 ball.removeFromParent()
                 let fallUtyujin = false
-            
-            
+                
+                
             }
             
             
@@ -363,32 +347,7 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
             
             
             
-            /*
-             class ViewController: UIViewController {
-             
-             private var myImageView: UIImageView!
-             
-             override func viewDidLoad() {
-             super.viewDidLoad()
-             
-             // UIImageViewを作成する.
-             myImageView = UIImageView(frame: CGRectMake(0,0,100,120))
-             
-             // 表示する画像を設定する.
-             let myImage = UIImage(named: ".png")
-             
-             // 画像をUIImageViewに設定する.
-             myImageView.image = myImage
-             
-             // 画像の表示する座標を指定する.
-             myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200.0)
-             
-             // UIImageViewをViewに追加する.
-             self.view.addSubview(myImageView)
-             }
-             
-             
-             
+            
              /* (id)initWithSize:(CGSize)size {
              self = [super initWithSize:size];
              if (self) {
@@ -402,15 +361,15 @@ class GameScene1 : SKScene, SKPhysicsContactDelegate {
              }*/
              }
              
-             */
-           
+        
+            
             
             
             
             
         }
     }
-}
+
 
 
 

@@ -15,6 +15,13 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func a(){
         
     }
@@ -24,12 +31,6 @@ class MainViewController: UIViewController {
     @IBAction func c(){
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
